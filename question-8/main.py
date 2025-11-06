@@ -15,6 +15,7 @@ def index():
 
 @app.route('/upload', methods=['POST'])
 def upload():
+    """saves the uploaded file and returns feedback"""
     file = request.files['file']
     if file.filename == "":
         return "No File Selected!"
